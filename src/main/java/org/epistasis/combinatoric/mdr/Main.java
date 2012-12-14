@@ -96,36 +96,36 @@ public class Main
 
     public static void main(final String[] args)
         {
-        final String experimentalTest = MDRProperties.get("experimentalTest");
-        if (experimentalTest != null)
-            {
-            final String[] propertyAndPossibleValues = experimentalTest.split(" ");
-            if (propertyAndPossibleValues.length >= 2)
-                {
-                final String[] propertyNames = propertyAndPossibleValues[0]
-                        .split("[|]");
-                for (final String propertyName : propertyNames)
-                    {
-                    final String propertyValue = System.getProperty(propertyName);
-                    if ((propertyValue != null) && (propertyValue.length() > 0))
-                        {
-                        for (int index = 1; index < propertyAndPossibleValues.length; ++index)
-                            {
-                            if (propertyValue
-                                    .equalsIgnoreCase(propertyAndPossibleValues[index]))
-                                {
-                                Main.isExperimental = true;
-                                break;
-                                }
-                            }
-                        if (Main.isExperimental)
-                            {
-                            break;
-                            }
-                        }
-                    } // end propertyNames
-                }
-            }
+        //final String experimentalTest = MDRProperties.get("experimentalTest");
+//        if (experimentalTest != null)
+//            {
+//            final String[] propertyAndPossibleValues = experimentalTest.split(" ");
+//            if (propertyAndPossibleValues.length >= 2)
+//                {
+//                final String[] propertyNames = propertyAndPossibleValues[0]
+//                        .split("[|]");
+//                for (final String propertyName : propertyNames)
+//                    {
+//                    final String propertyValue = System.getProperty(propertyName);
+//                    if ((propertyValue != null) && (propertyValue.length() > 0))
+//                        {
+//                        for (int index = 1; index < propertyAndPossibleValues.length; ++index)
+//                            {
+//                            if (propertyValue
+//                                    .equalsIgnoreCase(propertyAndPossibleValues[index]))
+//                                {
+//                                Main.isExperimental = true;
+//                                break;
+//                                }
+//                            }
+//                        if (Main.isExperimental)
+//                            {
+//                            break;
+//                            }
+//                        }
+//                    } // end propertyNames
+//                }
+//            }
         if (Main.isExperimental)
             {
             Main.minimumRandomSeed = -1;

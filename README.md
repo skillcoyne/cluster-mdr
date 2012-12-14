@@ -1,4 +1,0 @@
-cluster-mdr
-===========
-
-Java-MDR

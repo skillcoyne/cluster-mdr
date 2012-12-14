@@ -550,7 +550,7 @@ public class Console {
 				optFilter.addOption("relieff_rebalancing_method", Separator.EQUALS,
 						Multiplicity.ZERO_OR_ONE);
 			}
-			Console.printVersionHeader();
+			//Console.printVersionHeader();
 			final OptionSet set = opt.getMatchingSet(false /* ignoreUnmatched */,
 					false /* requireDataLast */);
 			if ((set != null) && (set.getUnmatched().size() > 0)) {
@@ -852,15 +852,15 @@ public class Console {
 		out.println();
 	}
 
-	private static void printVersionHeader() {
-		System.out.println("MDR Version " + MDRProperties.get("version") + " "
-				+ MDRProperties.get("releaseType") + " build date: "
-				+ MDRProperties.get("buildDate"));
-		if (Main.isExperimental) {
-			System.out.println("Experimental features are enabled.");
-		}
-		System.out.println();
-	}
+//	private static void printVersionHeader() {
+//		System.out.println("MDR Version " + MDRProperties.get("version") + " "
+//				+ MDRProperties.get("releaseType") + " build date: "
+//				+ MDRProperties.get("buildDate"));
+//		if (Main.isExperimental) {
+//			System.out.println("Experimental features are enabled.");
+//		}
+//		System.out.println();
+//	}
 
 	private static boolean randomSelected(final OptionSet set) {
 		if (set.isSet("random_search_eval") || set.isSet("random_search_runtime")) {
