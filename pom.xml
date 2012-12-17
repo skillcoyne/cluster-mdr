@@ -105,6 +105,8 @@
             <groupId>edu.northwestern.at</groupId>
             <artifactId>utils</artifactId>
             <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/NorthwesternUtils.jar</systemPath>
         </dependency>
 
     </dependencies>
